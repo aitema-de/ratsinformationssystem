@@ -20,7 +20,7 @@ jobs:
           cache-dependency-path: 'frontend/package-lock.json'
       - name: Abhängigkeiten installieren
         working-directory: frontend
-        run: npm ci
+        run: npm ci --legacy-peer-deps
       - name: Build ausführen
         working-directory: frontend
         run: npm run build --if-present
@@ -36,7 +36,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
         working-directory: frontend
       - run: npm run lint --if-present
         working-directory: frontend

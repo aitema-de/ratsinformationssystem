@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
+import Link from 'next/link';
 
 interface OrganizationDetail {
   id: string;
@@ -134,9 +135,9 @@ export default function GremiumDetailPage() {
     return (
       <div style={{ textAlign: 'center', padding: '3rem' }}>
         <h1 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Gremium nicht gefunden</h1>
-        <a href="/gremien" style={{ color: '#1d4ed8' }}>
+        <Link href="/gremien" style={{ color: '#1d4ed8' }}>
           Zurueck zur Uebersicht
-        </a>
+        </Link>
       </div>
     );
   }
@@ -150,15 +151,15 @@ export default function GremiumDetailPage() {
       <nav aria-label="Breadcrumb" style={{ marginBottom: '1.5rem', fontSize: '0.875rem' }}>
         <ol style={{ listStyle: 'none', display: 'flex', gap: '0.5rem', color: '#6b7280' }}>
           <li>
-            <a href="/" style={{ color: '#1d4ed8', textDecoration: 'none' }}>
+            <Link href="/" style={{ color: '#1d4ed8', textDecoration: 'none' }}>
               Startseite
-            </a>
+            </Link>
           </li>
           <li aria-hidden="true">/</li>
           <li>
-            <a href="/gremien" style={{ color: '#1d4ed8', textDecoration: 'none' }}>
+            <Link href="/gremien" style={{ color: '#1d4ed8', textDecoration: 'none' }}>
               Gremien
-            </a>
+            </Link>
           </li>
           <li aria-hidden="true">/</li>
           <li aria-current="page" style={{ color: '#374151' }}>

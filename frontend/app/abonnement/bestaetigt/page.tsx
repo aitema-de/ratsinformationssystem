@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function AbonnementBestaetigt() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
@@ -10,18 +12,18 @@ export default function AbonnementBestaetigt() {
           Sie erhalten ab sofort E-Mail-Benachrichtigungen zu Ihrem gewaehlten Thema oder Gremium.
         </p>
         <div className="flex flex-col gap-3">
-          <a
+          <Link
             href="/"
             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Zur Startseite
-          </a>
-          <a
+          </Link>
+          <Link
             href="/gremien"
             className="inline-block text-slate-600 hover:text-slate-900 text-sm hover:underline"
           >
             Weitere Gremien abonnieren
-          </a>
+          </Link>
         </div>
         <p className="text-xs text-slate-400 mt-8">
           aitema|RIS &middot; Ratsinformationssystem

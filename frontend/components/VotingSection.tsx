@@ -64,8 +64,8 @@ function StatusBadge({ result }: { result: VotingResult['result'] }) {
 // Doughnut-Chart (Chart.js via CDN – kein npm)
 // -----------------------------------------------------------------------
 declare global {
+  // eslint-disable-next-line no-unused-vars
   interface Window {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     Chart: any;
   }
 }
@@ -82,7 +82,6 @@ function VotingDonutChart({
   label: string;
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const chartRef = useRef<any>(null);
 
   useEffect(() => {

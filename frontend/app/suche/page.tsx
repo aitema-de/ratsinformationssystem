@@ -213,7 +213,7 @@ function SuchePageInner() {
   // Mobile-Filter-Drawer
   const [drawerOpen, setDrawerOpen] = useState(false);
   // Semantische Suche
-  const [searchMode, setSearchMode] = useState<'keyword' | 'semantic'>('keyword');
+  const [searchMode] = useState<'keyword' | 'semantic'>('keyword');
   const [semanticResults, setSemanticResults] = useState<SemanticSearchResponse | null>(null);
   const [semanticLoading, setSemanticLoading] = useState(false);
 
@@ -288,6 +288,7 @@ function SuchePageInner() {
 
 
   // Semantische Suche ausfuehren
+  // eslint-disable-next-line no-unused-vars
   const runSemanticSearch = async (q: string) => {
     if (!q || q.trim().length < 2) {
       setSemanticResults(null);
@@ -1344,7 +1345,7 @@ function FilterTag({ label, onRemove }: { label: string; onRemove: () => void })
 function Pagination({ currentPage, totalPages, onPageChange }: {
   currentPage: number;
   totalPages: number;
-  onPageChange: (page: number) => void;
+  onPageChange: (_page: number) => void;
 }) {
   const pages: (number | '...')[] = [];
   const delta = 2;

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -34,7 +35,7 @@ export default function RootLayout({
             <div className="flex items-center justify-between h-16">
 
               {/* Logo */}
-              <a
+              <Link
                 href="/"
                 className="flex items-center space-x-0.5 group"
                 aria-label="aitema RIS Startseite"
@@ -46,7 +47,7 @@ export default function RootLayout({
                 <span className="text-xl font-semibold text-blue-400 group-hover:text-blue-300 transition-colors">
                   RIS
                 </span>
-              </a>
+              </Link>
 
               {/* Main Navigation — Desktop */}
               <nav aria-label="Hauptnavigation" className="hidden md:flex items-center space-x-1">

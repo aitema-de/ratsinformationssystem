@@ -125,7 +125,6 @@ export default function PapersPage({ params }: PapersPageProps) {
                 Alle Typen
               </button>
               {PAPER_TYPES.map((type) => {
-                const style = TYPE_STYLES[type];
                 const isSelected = selectedType === type;
                 return (
                   <button
