@@ -225,7 +225,7 @@ export default function GremienPage() {
                               gap: '0.5rem',
                             }}
                           >
-                            {org.memberCount != null && (
+                            {org.memberCount !== null && org.memberCount !== undefined && (
                               <span>{org.memberCount} Mitglieder</span>
                             )}
                             {org.nextMeeting && (

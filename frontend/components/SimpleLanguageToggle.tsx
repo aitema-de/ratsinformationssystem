@@ -9,8 +9,9 @@ interface SimpleLanguageToggleProps {
 }
 
 declare global {
+  // eslint-disable-next-line no-unused-vars
   interface Window {
-    plausible?: (event: string, opts?: { props?: Record<string, string> }) => void;
+    plausible?: (_event: string, _opts?: { props?: Record<string, string> }) => void;
   }
 }
 

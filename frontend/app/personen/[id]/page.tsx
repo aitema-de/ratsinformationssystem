@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
+import Link from 'next/link';
 
 interface PersonDetail {
   id: string;
@@ -111,7 +112,7 @@ export default function PersonDetailPage() {
     return (
       <div style={{ textAlign: 'center', padding: '3rem' }}>
         <h1 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Person nicht gefunden</h1>
-        <a href="/personen" style={{ color: '#1d4ed8' }}>Zurueck zur Uebersicht</a>
+        <Link href="/personen" style={{ color: '#1d4ed8' }}>Zurueck zur Uebersicht</Link>
       </div>
     );
   }
@@ -126,9 +127,9 @@ export default function PersonDetailPage() {
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" style={{ marginBottom: '1.5rem', fontSize: '0.875rem' }}>
         <ol style={{ listStyle: 'none', display: 'flex', gap: '0.5rem', color: '#6b7280' }}>
-          <li><a href="/" style={{ color: '#1d4ed8', textDecoration: 'none' }}>Startseite</a></li>
+          <li><Link href="/" style={{ color: '#1d4ed8', textDecoration: 'none' }}>Startseite</Link></li>
           <li aria-hidden="true">/</li>
-          <li><a href="/personen" style={{ color: '#1d4ed8', textDecoration: 'none' }}>Personen</a></li>
+          <li><Link href="/personen" style={{ color: '#1d4ed8', textDecoration: 'none' }}>Personen</Link></li>
           <li aria-hidden="true">/</li>
           <li aria-current="page" style={{ color: '#374151' }}>{person.name}</li>
         </ol>

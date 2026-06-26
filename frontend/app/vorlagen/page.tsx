@@ -231,7 +231,7 @@ export default function VorlagenPage() {
                     <a
                       href={'/vorlagen/' + (p.id.split('/').pop() || p.id)}
                       onClick={() => {
-                        const w = window as unknown as { plausible?: (e: string, o: object) => void };
+                        const w = window as unknown as { plausible?: (_e: string, _o: object) => void };
                         if (w.plausible) w.plausible('vorlage_angesehen', { props: { type: p.paper_type } });
                       }}
                       style={{
